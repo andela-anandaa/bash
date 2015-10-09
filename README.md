@@ -13,10 +13,8 @@ mkdir -p {2000..2015}/{01..12}
 Improvised crossword solutions
 
 *Linux systems contain dictionaries.(On Ubuntu Linux, the path is /usr/share/dict/)
-**grep* can be use regular expressions and filter words in these dictionaries to solve crosswords!
+* **grep** can be used with regular expressions to filter words in these dictionaries to produce results that fit the criteria! e.g.
 
-
-e.g.
 
 1. A seven letter word that starts with "e" and ends with "nd".
 
