@@ -2,12 +2,16 @@
 This repo contains simple one liner Bash commands that can save your life.
 
 ### Recipe 1
-Create multiple recursive directories:
+Create multiple recursive directories and an file for each of them:
 
-```shell
-mkdir -p {2000..2015}/{01..12}
-```
-
+1. Create the directories
+	```shell
+	mkdir -p {2000..2015}/{01..12}
+	```
+2. Create the files using the *touch* command
+	```shell
+	touch {2000..2015}/{01..12}/README.txt
+	```
 
 ### Recipe 2
 Improvised crossword solutions
