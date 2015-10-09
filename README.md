@@ -28,7 +28,7 @@ Improvised crossword solutions
 2. A nine letter word whose first letter is "d" and sixth letter is "r".
 	
 	```shell
-	grep -i '^[a-z]....r..[a-z]$' american-english
+	grep -i '^d....r..[a-z]$' american-english
 	```
 
 3. A ten letter word that has "r" and "t" as the third and fourth letter respectively.
