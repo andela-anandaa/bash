@@ -9,15 +9,13 @@ mkdir -p {2000..2015}/{01..12}
 ```
 
 
-# References
-
-##Recipe 2
+## Recipe 2
 Improvised crossword solutions
 
-####A word that starts with e, has 7 characters, and ends with nd
+#### A word that starts with e, has 7 characters, and ends with nd
 
 ...shell
 grep -i '^e....nd$' american-english
 ...
 
-#References
+# References
