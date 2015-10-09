@@ -14,8 +14,8 @@ Improvised crossword solutions
 
 #### A word that starts with e, has 7 characters, and ends with nd
 
-...shell
+```shell
 grep -i '^e....nd$' american-english
-...
+```
 
 # References
