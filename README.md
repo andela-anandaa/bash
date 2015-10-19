@@ -16,8 +16,8 @@ Create multiple recursive directories and an file for each of them:
 ### Recipe 2
 Improvised crossword solutions
 
-*Linux systems contain dictionaries.(On Ubuntu Linux, the path is /usr/share/dict/)
-* **grep** can be used with regular expressions to filter words in these dictionaries to produce results that fit the criteria! e.g.
+Linux systems contain dictionaries.(On Ubuntu Linux, the path is /usr/share/dict/)
+ **grep** can be used with regular expressions to filter words in these dictionaries to produce results that fit the criteria! e.g.
 
 
 1. A seven letter word that starts with "e" and ends with "nd".
@@ -35,5 +35,16 @@ Improvised crossword solutions
 	```shell
 	grep -i '^[a-z].rt.....[a-z]$' american-english 
 	```
+
+### Recipe 3
+
+Removing all executable files in a directory
+
+Perfect for inclusion as a `make clean` directive in a Makefile
+
+```shell
+find -type f -executable | xargs rm
+```
+
 	
 # References
