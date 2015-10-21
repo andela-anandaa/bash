@@ -46,5 +46,74 @@ Perfect for inclusion as a `make clean` directive in a Makefile
 find -type f -executable | xargs rm
 ```
 
+### Recipe 4
+##### Filters
+
+Below is a text file with a popular sentence that has slight variations to show the functionality of the commands to follow.
+
+>**FIlename: fox.txt**
+
+```shell
+	The quick brown mule jumped over the lazy dog.
+	The quick brown cat jumped over the lazy dog.
+	The quick brown goat jumped over the lazy dog.
+	The quick brown dog jumped over the lazy dog.
+	The quick brown fox jumped over the lazy dog.
+	The quick brown donkey jumped over the lazy dog.
+	The quick brown fox jumped over the lazy dog.
+	The quick brown fox jumped over the lazy dog.
+	The quick brown mule jumped over the lazy dog.
+```
+
+1. **cat** is a command that reads one or more files and copies them to standard output. 
+
+	```shell
+	cat fox.txt
+	```
+
+	```shell
+	The quick brown mule jumped over the lazy dog.
+	The quick brown cat jumped over the lazy dog.
+	The quick brown goat jumped over the lazy dog.
+	The quick brown dog jumped over the lazy dog.
+	The quick brown fox jumped over the lazy dog.
+	The quick brown donkey jumped over the lazy dog.
+	The quick brown fox jumped over the lazy dog.
+	The quick brown fox jumped over the lazy dog.
+	The quick brown mule jumped over the lazy dog.
+	```
+
+2. **sort** is a command that can be piped to **cat**'s output to ... sort.
+	```shell
+	cat fox.txt | sort
+	``` 
 	
+	```shell
+	The quick brown cat jumped over the lazy dog.
+	The quick brown dog jumped over the lazy dog.
+	The quick brown donkey jumped over the lazy dog.
+	The quick brown fox jumped over the lazy dog.
+	The quick brown fox jumped over the lazy dog.
+	The quick brown fox jumped over the lazy dog.
+	The quick brown goat jumped over the lazy dog.
+	The quick brown mule jumped over the lazy dog.
+	The quick brown mule jumped over the lazy dog.
+	```
+
+    Notice how the animals are sorted in alphabetical order from top to bottom.
+
+3. **uniq** is a command that accepts a **sort**ed list and removes any duplicates (default behaviour).
+
+	```shell
+	cat fox.txt | sort | uniq
+	```
+
+	```shell
+	The quick brown cat jumped over the lazy dog.
+	The quick brown dog jumped over the lazy dog.
+	The quick brown donkey jumped over the lazy dog.
+	The quick brown fox jumped over the lazy dog.
+	The quick brown goat jumped over the lazy dog.
+	The quick brown mule jumped over the lazy dog.
+	```
 # References
