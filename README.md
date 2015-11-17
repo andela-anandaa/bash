@@ -16,7 +16,7 @@ Create multiple recursive directories and an file for each of them:
 ### Recipe 2
 Improvised crossword solutions
 
-Linux systems contain dictionaries.(On Ubuntu Linux, the path is /usr/share/dict/)
+Linux systems contain dictionaries.(On Ubuntu Linux, the path is /usr/share/dict/).
  **grep** can be used with regular expressions to filter words in these dictionaries to produce results that fit the criteria! e.g.
 
 
@@ -116,4 +116,27 @@ Below is a text file with a popular sentence that has slight variations to show 
 	The quick brown goat jumped over the lazy dog.
 	The quick brown mule jumped over the lazy dog.
 	```
+
+### Recipe 5
+#### Regular Expressions
+
+Regular expressions are  symbolic notations used to identify patterns in text files. This topic is so large I couldn't possibly hope to cover it all here. As such, this recipe should be considered a work in progress.
+
+In these examples, we'll be using a friend we've interacted with before; `grep`. `grep` supports filters through regular expressions. `grep` actually stands for __**G**lobal **R**egular **E**xpressions **P**rint__.
+
+
+##### Example 1 - There is safety in numbers.
+
+   * Find all the letters in the text below.
+
+      `2344832898s123a98389fe8932189312t2132317862153761y1238787`
+
+      * **Regular expression solution 1**: Find all the non-numbers in the text
+
+         `echo 2344832898s123a98389fe8932189312t2132317862153761y1238787| grep -E --color=auto '[^0-9]'`
+
+      * **Regular expression solution 2**: Find all the alphabet characters in the text
+
+         `echo 2344832898s123a98389fe8932189312t2132317862153761y1238787| grep -E --color=auto '[a-z]'`
+
 # References
